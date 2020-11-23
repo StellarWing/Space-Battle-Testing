@@ -1,5 +1,6 @@
 Spaceship myShip; //Spaceship = class, myShip is the ship
-Bullet myBullet;
+Asteroid myAsteroid;
+ArrayList<Bullet> myBullets;
 
 int mode;
 final int INTRO    = 0;
@@ -7,13 +8,18 @@ final int GAME     = 1;
 final int PAUSE    = 2;
 final int GAMEOVER = 3;
 
-boolean wkey, akey, skey, dkey;
+boolean wkey, akey, skey, dkey, spacekey;
 void setup() {
   size(800, 800);
   rectMode(CENTER);
   myShip = new Spaceship();
-  myBullet = new Bullet();
+  myAsteroid = new Asteroid();
+
   wkey=skey=akey=dkey=false;
+  
+  myBullets = new ArrayList<Bullet>();
+  
+  
   mode = INTRO;
 }
 

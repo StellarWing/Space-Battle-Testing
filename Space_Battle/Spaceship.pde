@@ -32,6 +32,7 @@ class Spaceship {
     if (dkey) direction.rotate(radians(5));
     if (wkey) velocity.add(direction);
     if (skey) velocity.sub(direction);
+    if (spacekey) myBullets.add(new Bullet());
     location.add(velocity);
     
   }
