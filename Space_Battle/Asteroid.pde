@@ -1,10 +1,6 @@
-class Asteroid {
+class Asteroid extends GameObject {
 
   //instance variables
-  PVector location; //random location
-  PVector velocity; //random speed/direction
-  int size;
-  int lives;
 
   //constructor
   Asteroid() {
@@ -14,13 +10,9 @@ class Asteroid {
     size = 50;
     lives = 3;
   }
-  void show() {
-    stroke(#D3D3D3);
-    fill(0);
-    rect(location.x, location.y, 13, 13);
-  }
+
   void act() {
-    location.add(velocity);
+   super.act();
     if (location.x < 0) location.x = width;
     if (location.x > width) location.x = 0;
     if (location.y < 0) location.y = height;

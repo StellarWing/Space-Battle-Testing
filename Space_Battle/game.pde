@@ -4,18 +4,18 @@ void game() {
   myShip.act();
   myAsteroid.show();
   myAsteroid.act();
-  println(myBullets.size());
+  println(myObjects.size());
 
-  int i = 0; //starting at bullet zero
-  while (i < myBullets.size()) { //size is increase in number
-    //processing each bullet individually 
-    Bullet b = myBullets.get(i); //gets the current bullet
-    if (b.lives > 0) {
-      b.show(); //tells current bullet to draw itself 
-      b.act();  //tells current bullet to update itself 
-      i++; //go to the next bullet
+  int i = 0; 
+  while (i < myObjects.size()) { 
+    
+    GameObject obj = myObjects.get(i); 
+    if (obj.lives > 0) {
+      obj.show(); 
+      obj.act();  
+      i++; 
     } else {
-      myBullets.remove(i); //bullet in garbage
+      myObjects.remove(i); //bullet in garbage
     }
   }
 }

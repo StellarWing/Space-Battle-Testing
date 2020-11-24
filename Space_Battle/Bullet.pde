@@ -1,9 +1,4 @@
-class Bullet {
-
-  //instance variables
-  PVector location;
-  PVector velocity;
-  int lives;
+class Bullet extends GameObject {
 
   //constructor
   Bullet() {
@@ -14,14 +9,10 @@ class Bullet {
   }
 
   //Behaviour functions
-  void show() {
-    stroke(255);
-    fill(0);
-    rect(location.x, location.y, 10, 10);
-  }
+
   void act() {
-    location.add(velocity);
-    if (location.x < 0 || location.x > width || location.y < 0 || location.y > height) {
+    super.act();
+    if (offScreen()) {
       lives = 0;
     }
   }
