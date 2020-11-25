@@ -27,7 +27,7 @@ class Asteroid extends GameObject {
       if (myObj instanceof Bullet) {
         if ( dist(location.x, location.y, myObj.location.x, myObj.location.y) <= size/2 + myObj.size) {
           myObj.lives = 0;
-          lives = 0;
+          lives --;
           myObjects.add(new Asteroid(size/2, location.x, location.y));
           myObjects.add(new Asteroid(size/2, location.x, location.y));
         }
