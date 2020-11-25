@@ -2,8 +2,8 @@ void game() {
   background(0);
   myShip.show();
   myShip.act();
-  myAsteroid.show();
-  myAsteroid.act();
+
+  
   println(myObjects.size());
 
   int i = 0; 

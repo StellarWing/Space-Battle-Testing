@@ -6,6 +6,7 @@ class Bullet extends GameObject {
     velocity = new PVector(myShip.direction.x, myShip.direction.y);
     velocity.setMag(18);
     lives = 1;
+    size = 10;
   }
 
   //Behaviour functions

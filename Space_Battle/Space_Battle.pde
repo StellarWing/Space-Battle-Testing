@@ -1,5 +1,5 @@
 Spaceship myShip; //Spaceship = class, myShip is the ship
-Asteroid myAsteroid;
+
 ArrayList<GameObject> myObjects;
 
 int mode;
@@ -13,13 +13,15 @@ void setup() {
   size(800, 800);
   rectMode(CENTER);
   myShip = new Spaceship();
-  myAsteroid = new Asteroid();
+ 
 
   wkey=skey=akey=dkey=false;
   
   myObjects = new ArrayList<GameObject>();
   
   myObjects.add(new Asteroid());
+   myObjects.add(new Asteroid());
+    myObjects.add(new Asteroid());
   
   
   mode = INTRO;
