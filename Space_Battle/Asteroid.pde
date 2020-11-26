@@ -33,7 +33,7 @@ class Asteroid extends GameObject {
         }
       }
       if (myObj instanceof Spaceship) {
-         //do things here  
+         //do things her, important 
       }
       i++;
     }
