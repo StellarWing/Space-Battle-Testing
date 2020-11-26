@@ -40,11 +40,22 @@ class Spaceship extends GameObject {
       velocity.add(direction);
       myObjects.add(new Fire());
     }
-
+    
+     if (lives == 0) {
+     mode = GAMEOVER; 
+    }
+    
     if (skey) velocity.sub(direction);
     if (spacekey && shotTimer > threshold) {
       myObjects.add(new Bullet());
       shotTimer = 0;
-    }
+    }   
+    
+     
+  
+    if (location.x < 0) location.x = width;
+    if (location.x > width) location.x = 0;
+    if (location.y < 0) location.y = height;
+    if (location.y > height) location.y = 0;
   }
 }

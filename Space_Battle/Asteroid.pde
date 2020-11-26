@@ -5,10 +5,10 @@ class Asteroid extends GameObject {
   //constructor
   Asteroid() {
     location = new PVector(random(width), random(height));
-    velocity = new PVector(random(5), random(5));
+    velocity = new PVector(random(2), random(2));
     velocity.rotate(random(TWO_PI));
     size = 50;
-    lives = 3;
+    lives = 1;
   }
 
   Asteroid(int s, float x, float y) {
@@ -31,6 +31,9 @@ class Asteroid extends GameObject {
           myObjects.add(new Asteroid(size/2, location.x, location.y));
           myObjects.add(new Asteroid(size/2, location.x, location.y));
         }
+      }
+      if (myObj instanceof Spaceship) {
+         //do things here  
       }
       i++;
     }

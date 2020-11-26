@@ -8,6 +8,8 @@ final int GAME     = 1;
 final int PAUSE    = 2;
 final int GAMEOVER = 3;
 
+int score, lives;
+
 boolean wkey, akey, skey, dkey, spacekey;
 void setup() {
   size(800, 800);
